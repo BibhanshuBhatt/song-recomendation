@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Song Recommendation System</title>
+    <!-- Link to CSS file -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>Song Recommendation System</h1>
+    <div class="input-section">
+        <label for="username">Enter Username:</label>
+        <input type="text" id="username" placeholder="Username">
+        <label for="genre">Preferred Genre:</label>
+        <select id="genre" onchange="getSongsByGenre()">
+            <option value="romantic">Romantic</option>
+            <option value="dance">Dance</option>
+            <option value="happy">Happy</option>
+            <option value="sad">Sad</option>
+            <option value="energetic">Energetic</option>
+            <option value="relaxed">Relaxed</option>
+            <option value="angry">Angry</option>
+            <option value="reflective">Reflective</option>
+            <option value="excited">Excited</option>
+            <option value="bored">Bored</option>
+            <option value="motivated">Motivated</option>
+            <option value="nostalgic">Nostalgic</option>
+            <option value="adventurous">Adventurous</option>
+            <option value="calm">Calm</option>
+            <option value="sentimental">Sentimental</option>
+            <option value="playful">Playful</option>
+            <option value="thoughtful">Thoughtful</option>
+
+            <!-- Add more genres as needed -->
+        </select>
+        <button onclick="getRecommendations()">Show Recommendations</button>
+    </div>
+    <div id="recommendations" class="recommendations">
+        <!-- Recommended songs will be displayed here -->
+    </div>
+    <div id="all-songs" class="all-songs">
+        <!-- Complete song list will be displayed here -->
+    </div>
+</div>
+<!-- Link to JavaScript file -->
+<script src="main.js"></script>
+</body>
+</html>
